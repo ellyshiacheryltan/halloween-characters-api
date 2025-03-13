@@ -1,0 +1,16 @@
+[build] 
+    publish = "netlify/build" 
+    functions = "netlify/functions"
+
+[functions]
+    directory = "netlify/functions"
+
+[[redirects]]
+    from = "/characters"
+    to = "/.netlify/functions/characters"
+    status = 200
+
+[[redirects]] 
+    from = "/*" 
+    to = "/index.html" 
+    status = 200
